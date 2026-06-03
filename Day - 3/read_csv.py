@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-csv_path = Path(__file__).resolve().parent / "student-mat.csv"
-df = pd.read_csv(csv_path, sep="\t")
+csv_path = Path(__file__).resolve().parent / "Accident_Information.csv"
+df = pd.read_csv(csv_path)
 
 print("Shape:", df.shape)
 print("\nColumn Names:")
@@ -14,5 +14,3 @@ print(df.head(3))
 print("\nLast 3 Rows:")
 print(df.tail(3))
 
-print("\nInternet Access Count:")
-print(df["internet"].value_counts())
