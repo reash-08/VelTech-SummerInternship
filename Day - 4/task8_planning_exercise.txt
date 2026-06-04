@@ -1,0 +1,112 @@
+PROJECT PLANNING EXERCISE
+
+Project Name
+------------
+Road Accident Severity Prediction Using Machine Learning
+
+Dataset Used
+------------
+accident_50k.csv
+
+This dataset contains 50,000 road accident records with 34 features describing various aspects of accidents such as road conditions, weather conditions, speed limits, lighting conditions, number of vehicles involved, casualty counts, location details, and accident severity.
+
+The dataset helps in understanding the factors that contribute to the seriousness of road accidents and can be used to build predictive models for accident severity classification.
+
+Features (X Columns)
+--------------------
+
+1. Road_Type
+Describes the type of road where the accident occurred, such as:
+- Single carriageway
+- Dual carriageway
+- Roundabout
+- Slip road
+- One-way street
+
+This feature helps determine whether certain road structures are associated with more severe accidents.
+
+2. Weather_Conditions
+Represents the weather at the time of the accident, such as:
+- Fine weather
+- Rain
+- Snow
+- Fog
+- High winds
+
+Weather conditions can significantly affect visibility and vehicle control.
+
+3. Speed_limit
+Indicates the maximum speed allowed on the road where the accident occurred.
+
+Higher speed limits often increase the likelihood of severe injuries and fatalities.
+
+4. Number_of_Vehicles
+Represents the total number of vehicles involved in the accident.
+
+Accidents involving multiple vehicles may lead to greater damage and higher accident severity.
+
+Target Variable (y Column)
+--------------------------
+
+Accident_Severity
+
+This is the output variable that the model will predict.
+
+Possible categories include:
+- Slight – Minor injuries or damage.
+- Serious – Significant injuries requiring medical attention.
+- Fatal – Accidents resulting in loss of life.
+
+The goal of the model is to classify each accident into one of these severity categories.
+
+Problem Statement
+-----------------
+
+Road accidents are one of the leading causes of injuries and fatalities worldwide. Government agencies and transportation departments collect accident data to understand the factors that contribute to accident severity.
+
+Analyzing this data manually is difficult because of the large number of records and variables involved. Machine learning can help identify patterns in historical accident data and predict the severity of future accidents based on important factors such as road type, weather conditions, speed limits, and traffic involvement.
+
+Question the Model Will Answer
+------------------------------
+
+"Given the road type, weather conditions, speed limit, and number of vehicles involved, what is the most likely accident severity category (Slight, Serious, or Fatal)?"
+
+Machine Learning Approach
+-------------------------
+
+Problem Type:
+Classification
+
+Algorithm Used:
+Random Forest Classifier
+
+Input Features (X):
+- Road_Type
+- Weather_Conditions
+- Speed_limit
+- Number_of_Vehicles
+
+Output (y):
+- Accident_Severity
+
+Evaluation Metrics:
+- Accuracy Score
+- F1 Score
+- Confusion Matrix
+
+Expected Outcome
+----------------
+
+The trained model will learn patterns from historical accident records and predict accident severity for new accident cases.
+
+The results can help:
+- Understand accident risk factors.
+- Support road safety analysis.
+- Assist transportation authorities in decision-making.
+- Improve accident prevention strategies.
+- Identify conditions that are associated with more severe accidents.
+
+Project Objective
+-----------------
+
+To develop a machine learning model that analyzes historical road accident data and accurately predicts accident severity, enabling data-driven insights for improving road safety and reducing accident-related risks.
