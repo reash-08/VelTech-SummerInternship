@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h2>ABC College</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+<h1>Student Records</h1>
+
+<table>
+
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Department</th>
+<th>Year</th>
+</tr>
+
+{% for student in students %}
+
+<tr>
+<td>{{ student.roll }}</td>
+<td>{{ student.name }}</td>
+<td>{{ student.dept }}</td>
+<td>{{ student.year }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+<footer>
+    © 2025 Student Registration System
+</footer>
+
+</body>
+</html>
