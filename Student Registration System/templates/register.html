@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h2>ABC College</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+<h1>Student Registration Form</h1>
+
+<form>
+
+<label>Student Name</label>
+<input type="text">
+
+<label>Roll Number</label>
+<input type="text">
+
+<label>Department</label>
+<input type="text">
+
+<label>Year</label>
+<input type="number">
+
+<label>Email</label>
+<input type="email">
+
+<label>Phone Number</label>
+<input type="text">
+
+<label>Gender</label>
+<select>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+</select>
+
+<label>Address</label>
+<textarea rows="4"></textarea>
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+<footer>
+    © 2025 Student Registration System
+</footer>
+
+</body>
+</html>
