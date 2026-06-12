@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Students</title>
+    <title>Registered Students</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
 <nav>
-    <h2>ABC College</h2>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/students">Students</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
+    <a href="/">Home</a>
+    <a href="/register">Register</a>
+    <a href="/students">Students</a>
+    <a href="/about">About</a>
 </nav>
 
 <div class="container">
 
-<h1>Student Records</h1>
+    <h1>Registered Students</h1>
 
-<table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Department</th>
+            <th>Year</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Address</th>
+        </tr>
 
-<tr>
-<th>Roll No</th>
-<th>Name</th>
-<th>Department</th>
-<th>Year</th>
-</tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+            <td>{{ student[5] }}</td>
+            <td>{{ student[6] }}</td>
+            <td>{{ student[7] }}</td>
+            <td>{{ student[8] }}</td>
+        </tr>
+        {% endfor %}
 
-{% for student in students %}
-
-<tr>
-<td>{{ student.roll }}</td>
-<td>{{ student.name }}</td>
-<td>{{ student.dept }}</td>
-<td>{{ student.year }}</td>
-</tr>
-
-{% endfor %}
-
-</table>
+    </table>
 
 </div>
-
-<footer>
-    © 2025 Student Registration System
-</footer>
 
 </body>
 </html>
